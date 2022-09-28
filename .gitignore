@@ -1,0 +1,8 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+venv/
+Algorithm/TrainingAlgo/ReportTrainingAlgo/DeepPrior/text_feature_extra/runs/

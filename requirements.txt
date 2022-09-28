@@ -1,0 +1,13 @@
+text2vec==1.1.5
+numpy==1.21.2
+pandas==1.4.1
+flask==2.0.3
+
+baidu-aip
+jieba
+gensim
+opencv-python==4.5.5.64
+
+urllib3
+matplotlib
+chardet

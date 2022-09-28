@@ -1,0 +1,8 @@
+userId taskId Rating TimeStamp<----> proficiency    preference  activity  test_devices <---> task_type   task_introduction(这里只记录字数)   worker_num_total    worker_num-left task_difficulty required_task_devices
+
+
+
+
+
+
+

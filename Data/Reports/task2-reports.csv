@@ -1,0 +1,6 @@
+report_id,defect_explanation,defect_reproduction_step,img_url
+309,进入兴趣部落页面 点击“周贡献榜” 出现“网页无法打开”。,进入兴趣部落页面 点击“周贡献榜” 出现“网页无法打开”。,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508579439093/A251C109DD3DC4F95AA802B9143DF7E0.jpg
+310,进入兴趣部落页面 点击“周贡献榜” 出现“网页无法打开”。,进入兴趣部落页面 点击“周贡献榜” 出现“网页无法打开”。,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508579439093/A251C109DD3DC4F95AA802B9143DF7E0.jpg
+282,点击部落头像 显示无法打开网页,点击部落头像 显示无法打开网页,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508578273003/bug4.png
+294,进入兴趣部落 点击周贡献榜 信息未能正常显示,进入兴趣部落 点击周贡献榜 信息未能正常显示,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508579439093/A251C109DD3DC4F95AA802B9143DF7E0.jpg
+360,进入企鹅众测的兴趣部落 点击精华的标签，周贡献版等 显示无法打开页面,进入企鹅众测的兴趣部落 点击精华的标签，周贡献版等 显示无法打开页面,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg
