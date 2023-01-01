@@ -109,6 +109,9 @@ def getSimilarReports():
 
 @app.route('/getRecommendedReports', methods=['POST'])
 def getRecommendedReports():
+    '''
+    DeepPrior算法直接推荐该报告所属的Task下的报告， 不需要用到该报告的ID
+    '''
     getSimilarReportsDTO = GetRecommendedReportsDTO(request.json)
 
     reportService = ReportService()

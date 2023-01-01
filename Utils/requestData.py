@@ -68,6 +68,9 @@ PostPrepareReportSimilarityTrainingData_XinQuBuLuo = {
 
 
 PostPrepareReportSimilarityTrainingData_XinQuBuLuo2 = {
+    '''
+    task_id = 2
+    '''
 "report_list": [
         {
             "report_id": 309,
@@ -645,7 +648,7 @@ PostGetSimilarReportsData = {
 
 PostGetRecommendedReportsData = {
     "report_id": 25,
-    "task_id": 1,
+    "task_id": 2,
     "recommended_report_num": 62,
     "algorithm": "DeepRecommendation"
 }

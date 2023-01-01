@@ -1,1 +1,20 @@
 userId taskId Rating TimeStamp<----> proficiency    preference  activity  test_devices <---> task_type   task_introduction(这里只记录字数)   worker_num_total    worker_num_left task_difficulty required_task_devices
+77::44::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::performance test::31::57::26::0.432377::Android,Linux,iOS
+77::82::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::performance test::46::25::0::0.61::Android
+77::11::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::function test::12::60::53::0.3237::Android,Linux,iOS
+77::99::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::function test::18::11::2::0.72::Android,iOS
+17::18::3::978301968::18::eu,occaecat::21::magna,laboris voluptate consequat aliqua est,occaecat velit anim cillum::sunt::14::59::87::93::eu velit ad ipsum non,fugiat aliquip reprehenderit,sed exercitation magna dolore commodo
+61::49::3::978301968::53::irure consequat in non velit,ut ullamco nulla cillum reprehenderit,mollit sit ex sunt qui,officia nostrud cillum nulla eiusmod::55::aliqua exercitation Ut magna est,Ut voluptate,ad consequat,est Lorem ex Ut nisi::mollit do qui::24::64::56::10::ut
+61::28::3::978301968::53::irure consequat in non velit,ut ullamco nulla cillum reprehenderit,mollit sit ex sunt qui,officia nostrud cillum nulla eiusmod::55::aliqua exercitation Ut magna est,Ut voluptate,ad consequat,est Lorem ex Ut nisi::occaecat anim ut nulla::17::1::73::73::nostrud in laboris proident dolore,cillum dolore Duis et laboris,voluptate in id,minim elit,id
+89::70::3::978301968::50::voluptate ut non::30::in ut Lorem cillum mollit,incididunt ad elit,anim incididunt occaecat dolor,mollit pariatur sit::veniam pariatur enim::20::56::63::36::ea dolor id,ullamco occaecat
+89::52::3::978301968::50::voluptate ut non::30::in ut Lorem cillum mollit,incididunt ad elit,anim incididunt occaecat dolor,mollit pariatur sit::velit sed cillum commodo nostrud::23::72::41::5::ut,dolore incididunt in minim,sed,elit adipisicing laboris Excepteur qui,fugiat voluptate mollit adipisicing cupidatat
+89::75::3::978301968::50::voluptate ut non::30::in ut Lorem cillum mollit,incididunt ad elit,anim incididunt occaecat dolor,mollit pariatur sit::amet::27::28::39::93::nisi,dolore adipisicing pariatur et aliquip
+89::34::3::978301968::50::voluptate ut non::30::in ut Lorem cillum mollit,incididunt ad elit,anim incididunt occaecat dolor,mollit pariatur sit::consequat quis::23::91::19::92::in culpa ipsum dolore nisi,aute,sed esse fugiat dolore,Ut commodo occaecat
+77::44::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::performance test::31::57::26::0.432377::Android,Linux,iOS
+77::82::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::performance test::46::25::0::0.61::Android
+77::11::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::function test::12::60::53::0.3237::Android,Linux,iOS
+77::99::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::function test::18::11::2::0.72::Android,iOS
+77::44::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::performance test::31::57::26::0.432377::Android,Linux,iOS
+77::82::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::performance test::46::25::0::0.61::Android
+77::11::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::function test::12::60::53::0.3237::Android,Linux,iOS
+77::99::3::978301968::0.65::performance test,function test::0.11::Android,Windows,iOS::function test::18::11::2::0.72::Android,iOS

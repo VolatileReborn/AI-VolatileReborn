@@ -67,10 +67,12 @@ def testGetReportEvaluation():
 if __name__ == "__main__":
 
     # testPostPrepareTaskRecommendationTrainingData()
+    # testPostGetRecommendedTasks()
+
+    # task_id = 2
     # testPrepareReportTrainingData()
     # testGetSimilarReports()
     # testGetRecommendedReports()
-    # testPostGetRecommendedTasks()
-    # testClusterReports()
+    testClusterReports()
     # testGetReportEvaluation()# 自动化评估
-    testGetAugmentedReports()
+    # testGetAugmentedReports()
