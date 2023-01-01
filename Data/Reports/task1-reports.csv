@@ -1,5 +1,6 @@
 report_id,defect_explanation,defect_reproduction_step,img_url
-309,进入兴趣部落页面 点击“周贡献榜” 出现“网页无法打开”。,进入兴趣部落页面 点击“周贡献榜” 出现“网页无法打开”。,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508579439093/A251C109DD3DC4F95AA802B9143DF7E0.jpg
-282,点击部落头像 显示无法打开网页,点击部落头像 显示无法打开网页,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508578273003/bug4.png
-294,进入兴趣部落 点击周贡献榜 信息未能正常显示,进入兴趣部落 点击周贡献榜 信息未能正常显示,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508579439093/A251C109DD3DC4F95AA802B9143DF7E0.jpg
-360,进入企鹅众测的兴趣部落 点击精华的标签，周贡献版等 显示无法打开页面,进入企鹅众测的兴趣部落 点击精华的标签，周贡献版等 显示无法打开页面,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg
+11,点击抽奖按钮三秒 点击停止抽奖 预期结果：转盘成功停止转动，抽奖成功 实际结果： 抽奖失败,点击抽奖按钮三秒 点击停止抽奖 预期结果：转盘成功停止转动，抽奖成功 实际结果： 抽奖失败,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508578034294/Screenshot_2017-10-21-15-32-54.png
+25,点击“任务广场”按钮 点击“1017-查询运动领域问法收集七”选项 点击“领取任务”按钮 点击“开始做任务” 未出现任务信息,点击“任务广场”按钮 点击“1017-查询运动领域问法收集七”选项 点击“领取任务”按钮 点击“开始做任务” 未出现任务信息,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508577976200/%E4%BB%BB%E5%8A%A1.png
+50,点击“发现”按钮进入“发现”页面 点击“积分抽奖”按钮 点击“开始抽奖”按钮 点击“停止抽奖”按钮 无法出现抽奖结果，出现错误：很抱歉，抽奖失败，请检查网络[java.lang.lllegalStateException:Expected BEGIN_OBJECT but was STRING at line 1 column 2],点击“发现”按钮进入“发现”页面 点击“积分抽奖”按钮 点击“开始抽奖”按钮 点击“停止抽奖”按钮 无法出现抽奖结果，出现错误：很抱歉，抽奖失败，请检查网络[java.lang.lllegalStateException:Expected BEGIN_OBJECT but was STRING at line 1 column 2],http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508578078073/%E6%8A%BD%E5%A5%96.png
+14,进入任务 点击1017-查询运动领域问法收集 点击领取任务 点击开始做任务 直接提示没有更多题目。不管是1017-查询运动领域问法收集二，1017-查询运动领域问法收集六，还是其他几个相似题目，都没有可做题目，。此BUG严重等级一般，这几个任务复现程度是必现。影响用户体验。,进入任务 点击1017-查询运动领域问法收集 点击领取任务 点击开始做任务 直接提示没有更多题目。不管是1017-查询运动领域问法收集二，1017-查询运动领域问法收集六，还是其他几个相似题目，都没有可做题目，。此BUG严重等级一般，这几个任务复现程度是必现。影响用户体验。,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508582820700/QQ%E5%9B%BE%E7%89%8720171021172949.png
+15,进入“发现”页面 点击“寻找小伙伴”  需要点击寻找小伙伴才能找到“兴趣部落”按钮,进入“发现”页面 点击“寻找小伙伴”  需要点击寻找小伙伴才能找到“兴趣部落”按钮,http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580087898/%E5%9B%BE%E7%89%876.png

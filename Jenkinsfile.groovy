@@ -1,3 +1,4 @@
+//使用腾讯云serevr， 可能会很卡
 node("slave1") {
     def workspace = pwd()
 
@@ -13,15 +14,15 @@ node("slave1") {
     def vm_target_place = "/usr/local/src/target/"
 
 
-    def IMAGE_NAME = 'volatile_ai'
-    def IMAGE_NAME_WITH_TAG = 'volatile_ai:latest'
-    def IMAGE_TO_RUN = 'lyklove/volatile_ai:latest'
-    def CONTAINER_NAME = 'volatile_ai'
+    def IMAGE_NAME = 'volatile_reborn_ai'
+    def IMAGE_NAME_WITH_TAG = 'volatile_reborn_ai:latest'
+    def IMAGE_TO_RUN = 'lyklove/volatile_reborn_ai:latest'
+    def CONTAINER_NAME = 'volatile_reborn_ai'
 
 
     def CONTAINER_DATA_PATH = '/project/Data'
     def MOUNT_VOLUME = 'volatile_ai_data'
-    def VOLUME_MOUNT_POINT = '/var/lib/docker/volumes/volatile_ai_data/_data'
+    def VOLUME_MOUNT_POINT = '/var/lib/docker/volumes/volatile_reborn_ai_data/_data'
 
 
         stage('clone from github into slave\'s workspace. Using branch: ' + "master") {
