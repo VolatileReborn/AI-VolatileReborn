@@ -51,6 +51,18 @@ def testClusterReports():
     print(r.headers)
     print(r.text)
 
+def testGetAugmentedReports():
+    data = PostGetAugmentedReportsData
+    r = requests.post("http://127.0.0.1:5001/getAugmentedReports",json=data)
+    print(r.headers)
+    print(r.text)
+
+def testGetReportEvaluation():
+    data = PostGetReportEvaluationData
+    r = requests.post("http://127.0.0.1:5001/getReportEvaluation", json=data)
+    print(r.headers)
+    print(r.text)
+
 
 if __name__ == "__main__":
 
@@ -59,4 +71,6 @@ if __name__ == "__main__":
     # testGetSimilarReports()
     # testGetRecommendedReports()
     # testPostGetRecommendedTasks()
-    testClusterReports()
+    # testClusterReports()
+    # testGetReportEvaluation()# 自动化评估
+    testGetAugmentedReports()

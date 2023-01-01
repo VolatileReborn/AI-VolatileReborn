@@ -35,6 +35,7 @@ class ReportMapper(object):
         if not os.path.exists(report_file_path):
             self.__insert_header(report_file_path)
 
+        # 不管扩增和评估
         with open(report_file_path, 'a', encoding='utf-8', newline='') as report_file:
             csv_writer = csv.writer(report_file)
             csv_writer.writerow([reportDAO.report_id, reportDAO.defect_explanation, \

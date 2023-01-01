@@ -8,6 +8,7 @@ from flask import Flask, request, Response
 from werkzeug.utils import secure_filename
 import os
 
+from DTO.GetAugmentedReportsDTO import GetAugmentedReportsDTO
 from DTO.PrepareTaskRecommendationTrainingDataDTO import *
 from DTO.PrepareReportTrainingDataDTO import *
 
@@ -16,6 +17,8 @@ from DTO.GetSimilarReportsDTO import *
 from DTO.GetRecommendedReportsDTO import *
 
 from DTO.GetRecommendedTasksDTO import *
+from DTO.GetReportEvaluationDTO import *
+
 
 from VO.ClusterReportsVO import *
 from VO.GetSimilarReportsVO import *
@@ -31,8 +34,12 @@ from VO.Document import Document
 # app = Flask(__name__, static_folder="./static", template_folder='./templates')
 app = Flask(__name__)
 
+# 禁止对中文进行转码
+app.config['JSON_AS_ASCII'] = False
+
 app.config['UPLOAD_FOLDER'] = 'static/uploads/'
 app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif'}  # 集合类型
+
 
 
 def allowed_file(filename):  # 判断filename是否有后缀以及后缀是否在app.config['ALLOWED_EXTENSIONS']中
@@ -136,6 +143,22 @@ def prepareReportTrainingData():
     report_service.prepare_report_data(prepareReportTrainingDataDTO)
     return Response(json.dumps("Report Data Prepared Successfully"), mimetype='application/json')
 
+@app.route('/getAugmentedReports', methods=['POST'])
+def getAugmentedReports():
+    getAugmentedReportsDTO = GetAugmentedReportsDTO(request.json)
+
+    report_service = ReportService()
+    getAugmentedReportsVO = report_service.get_augmented_reports(getAugmentedReportsDTO)
+    return Response(json.dumps(getAugmentedReportsVO.get_value()), mimetype='application/json')
+
+@app.route('/getReportEvaluation', methods=['POST'])
+def getReportEvaluation():
+    getReportEvaluationDTO = GetReportEvaluationDTO(request.json)
+
+    report_service = ReportService()
+    getReportEvaluationVO = report_service.get_report_evaluation(getReportEvaluationDTO)
+    return Response(json.dumps(getReportEvaluationVO.get_value()), mimetype='application/json')
+
 
 @app.route('/clusterReports', methods=['POST'])
 def clusterReports():
@@ -147,5 +170,8 @@ def clusterReports():
 
 if __name__ == "__main__":
     # 这种是不太推荐的启动方式，我这只是做演示用，官方启动方式参见：http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application
-    app.run(host='0.0.0.0', port=5001, debug=True)  # 将debug设置为True的另一个好处是，程序启动后，会自动检测源码是否发生变化，若有变化则自动重启程序
-    # print(ReportEnum.REPORT)
+
+
+
+    app.run(host='0.0.0.0', port=int("5001"), debug=True)  # 将debug设置为True的另一个好处是，程序启动后，会自动检测源码是否发生变化，若有变化则自动重启程序
+    print("JSON ASCII: " + app.config['JSON_AS_ASCII'])

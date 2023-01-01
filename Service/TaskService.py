@@ -31,6 +31,7 @@ class TaskService(object):
         self.__saveIntoDataSource(*userList)
 
     def get_top_n_recommended_tasks(self, getRecommendedTasksDTO):
+        # get params
         user = getRecommendedTasksDTO.user
         recommendation_rules = getRecommendedTasksDTO.recommendation_rules
         recommended_task_num = getRecommendedTasksDTO.recommended_task_num
@@ -39,7 +40,7 @@ class TaskService(object):
 
         result_list = list()
 
-        self.__saveIntoDataSource(user)  # 将该用户的记录也存入数据源
+        self.__saveIntoDataSource(user)  # 将该用户的记录也存入数据存储
         user_id = user.get(UserEnum.USER_ID)
 
         if algorithm == AlgorithmEnum.RecommendationAlgoEnum.TaskRecommendationAlgoEnum.ITEM_CF:

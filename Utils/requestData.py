@@ -654,3 +654,60 @@ PostClusterReportsData = {
     "report_id": 309,
     "task_id": 2
 }
+
+PostGetAugmentedReportsData = {
+    "augmented_report_num": 3,
+    "report": {
+        "report_id": 2,
+        "report_name": "鸭子杀测试",
+        "defect_explanation": "宽宽是狼！宽宽是狼！汪汪是鹈鹕！ ",
+        "defect_reproduction_step": "宽宽把汪汪砍死啦！",
+        "test_equipment_information": "铁呆呆鸟， 装都不装了！",
+        "defect_picture_list": [
+                {
+                    "img_name": "哈哈hhh",
+                    "img_url": "http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg",
+                    "img_id": 44
+                },
+                {
+                    "img_name": "哈哈hhh2",
+                    "img_url": "http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg",
+                    "img_id": 45
+                },
+        ],
+        "is_augmented": False,
+        "task_id": 94
+    },
+    "algorithm": "nlpaug"
+}
+
+PostGetReportEvaluationData = {
+    "report": {
+        "report_id": 37,
+        "report_name": "府县值九识温",
+        "defect_explanation": "ea irure dolore",
+        "test_equipment_information": "Excepteur",
+        "defect_picture_list": [
+            {
+                "img_name": "http://dummyimage.com/400x400",
+                "img_url": "http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg",
+                "img_id": 51
+            },
+            {
+                "img_name": "http://dummyimage.com/400x400",
+                "img_url": "http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg",
+                "img_id": 66
+            },
+            {
+                "img_name": "http://dummyimage.com/400x400",
+                "img_url": "http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg",
+                "img_id": 82
+            }
+        ],
+        "is_augmented": False,
+        "defect_reproduction_step": "nisi ea minim",
+        "task_id": 42
+    },
+    "algorithm": "ad anim"
+}
+

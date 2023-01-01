@@ -1,8 +1,8 @@
 from aip import AipOcr
 
 
-def get_baidu_ocr_res(path):
-    img = open(path, 'rb').read()
+def get_baidu_ocr_res(img_path):
+    img = open(img_path, 'rb').read()
     options = {'language-type': "CNH_ENG"}
     # please replace with your own app_id, api_key, and secret_key
     client = AipOcr('26307650', 'eAQGKGnthnfHOfx6U8hc1pt4', 'RPncQuWAzFu0ZaXzmiWbLSdPMCWpQZej')

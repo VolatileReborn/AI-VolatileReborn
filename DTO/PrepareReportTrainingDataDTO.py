@@ -1,5 +1,6 @@
 from Utils.SymbolHandler import ReportEnum, AlgorithmEnum
 
+
 class PrepareReportTrainingDataDTO():
     def __init__(self, json_data):
         self.report_list = json_data.get('report_list')

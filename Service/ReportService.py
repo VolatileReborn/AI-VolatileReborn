@@ -1,6 +1,9 @@
 import os
+import random
 
+from Algorithm.AugmentationAlgo.NLPAUG import NLPAUG
 from Algorithm.ClusterAlgo.KMeans import KMeansStrategy
+from Algorithm.EvaluationAlgo.SimpleEva import SimpleEva
 from Algorithm.RecommendationAlgo.ReportRecommendationAlgo.DeepRecommendation.DeepRecommendation import \
     DeepRecommendation
 from Algorithm.TrainingAlgo.ReportTrainingAlgo.DeepPrior.DeepPrior import DeepPrior
@@ -8,6 +11,8 @@ from Algorithm.SimilarityAlgo.DeepSimilarity.DeepSimilarity import DeepSimilarit
 from DTO.GetSimilarReportsDTO import *
 
 from Mapper.ReportMapper import *
+from VO.GetAugmentedReportsVO import GetAugmentedReportsVO
+from VO.GetReportEvaluationVO import GetReportEvaluationVO
 from VO.GetSimilarReportsVO import GetSimilarReportsVO
 
 
@@ -80,7 +85,8 @@ class ReportService(object):
         report_sim_matrix_file_path = self.__get_report_sim_matrix_file_path(task_id)
         report_vec_file_path = self.__get_report_vec_file_path(task_id)
 
-        report_training_strategy.train_reports(report_file_path, task_id, report_sim_matrix_file_path, report_vec_file_path)
+        report_training_strategy.train_reports(report_file_path, task_id, report_sim_matrix_file_path,
+                                               report_vec_file_path)
 
         return
 
@@ -126,30 +132,76 @@ class ReportService(object):
 
         return report_id_list[:getRecommendedReportsDTO.recommended_report_num]
 
-    # def get_top_n_plain_text_similar_reports(self, originalDocument, comparedDocuments, N, algorithm):
-    #     if algorithm == ReportSimilarityAlgorithm.TF_IDF:
-    #         plainTextSimilarityStrategy = TF_IDF()
-    #     else:  # todo
-    #         plainTextSimilarityStrategy = TF_IDF()
-    #     return plainTextSimilarityStrategy.get_top_n_similar_reports(originalDocument, comparedDocuments, N)
+    def get_augmented_reports(self, getAugmentedReportsDTO):
+        '''
+        对于给定报告， 扩增出n篇报告
+        '''
+        n = getAugmentedReportsDTO.augmented_report_num
 
-    '''
-    queried_report： string
-    compared_reports：list(string)
-    '''
+        n = 1 # 硬编码
 
-    # def get_top_n_similar_report_ids(self, queried_report, compared_reports, N, algorithm):
-    #
-    #     queried_report = [queried_report]
-    #     # return get_top_n_similar_result_ids( queried_report, compared_reports, N, algorithm)
-    #     if algorithm == 'CosineSimilarity':
-    #         textSimilarityStratefy = CosineTextSemanticSimilarityStrategy(queried_report, compared_reports)
-    #     elif algorithm == 'SemanticSearch':
-    #         textSimilarityStratefy = SemanticSearchTextSemanticSimilarityStrategy(queried_report, compared_reports)
-    #     else:
-    #         textSimilarityStratefy = BM25TextSemanticSimilarityStrategy(queried_report, compared_reports)
-    #
-    #     return textSimilarityStratefy.get_top_n_semantically_similar_reports(N)
+        report = getAugmentedReportsDTO.report
+        augmentation_algorithm = getAugmentedReportsDTO.algorithm
+
+        is_augmented = report[ReportEnum.IS_AUGMENTED]
+
+        if is_augmented == True:
+            # 对于扩增出的报告， 继续对其扩增
+            pass
+
+        # 目前只有nlpaug一种文本扩增算法
+        if augmentation_algorithm == AlgorithmEnum.AugmentationEnum.NLPAUG:
+            report_augmentation_strategy = NLPAUG()
+        else:
+            report_augmentation_strategy = NLPAUG()
+
+        # extract param
+        original_defect_explanation = report[ReportEnum.DEFECT_EXPLANATION]
+        original_defect_reproduction_step = report[ReportEnum.DEFECT_REPRODUCTION_STEP]
+        original_test_equipment_information = report[ReportEnum.TEST_EQUIPMENT_INFORMATION]
+        original_report_name = report[ReportEnum.REPORT_NAME]  # report_name也要扩增
+
+        # augment
+
+        augmented_defect_explanation_list = report_augmentation_strategy.text_augmentation(original_defect_explanation, n)
+        augmented_defect_reproduction_step_list = report_augmentation_strategy.text_augmentation(
+            original_defect_reproduction_step, n)
+        augmented_test_equipment_information_list = report_augmentation_strategy.text_augmentation(
+            original_test_equipment_information, n)
+        augmented_report_name_list = report_augmentation_strategy.text_augmentation(original_report_name, n)
+
+
+
+        getAugmentedReportsVO = GetAugmentedReportsVO(n, augmented_defect_explanation_list, augmented_defect_reproduction_step_list,
+                                                      augmented_test_equipment_information_list, augmented_report_name_list)
+        return getAugmentedReportsVO
+
+
+    def get_report_evaluation(self, getReportEvaluationDTO):
+
+        report = getReportEvaluationDTO.report
+        evaluation_algorithm = getReportEvaluationDTO.algorithm
+
+
+        if evaluation_algorithm == AlgorithmEnum.EvaluationEnum.SIMPLE_EVA:
+            report_evaluation_strategy = SimpleEva()
+        else:
+            report_evaluation_strategy = SimpleEva()
+
+        defect_picture_list = report[ReportEnum.DEFECT_PICTURE_LIST]
+
+        img_url_list = list()
+        for picture in defect_picture_list:
+            img_url_list.append(picture[ReportEnum.DefectPictureEnum.IMG_URL])
+
+
+        text = report[ReportEnum.DEFECT_EXPLANATION] + report[ReportEnum.DEFECT_REPRODUCTION_STEP]
+
+        report_evaluation_value = report_evaluation_strategy.report_evaluation(text, img_url_list)
+        is_evaluated = True
+
+        getReportEvaluationVO = GetReportEvaluationVO(report_evaluation_value, is_evaluated)
+        return getReportEvaluationVO
 
     def cluster_reports(self, clusterReportsDTO):
 
@@ -182,7 +234,7 @@ class ReportService(object):
         3. 报告的向量
         :return:
         '''
-        self.__clear_file( self.__get_report_file_path(task_id) )
+        self.__clear_file(self.__get_report_file_path(task_id))
         self.__clear_file(self.__get_report_sim_matrix_file_path(task_id))
         self.__clear_file(self.__get_report_vec_file_path(task_id))
 

@@ -2,11 +2,18 @@ class ReportEnum():
     # 类属性
     REPORT = 'report'
     REPORT_ID = 'report_id'
+    REPORT_NAME = 'report_name'
+
     TASK_ID = 'task_id'
     RELATED_REPORTS = 'related_reports'
     DEFECT_EXPLANATION = 'defect_explanation'
     DEFECT_REPRODUCTION_STEP = 'defect_reproduction_step'
+    TEST_EQUIPMENT_INFORMATION = 'test_equipment_information'
     DEFECT_PICTURE_LIST = 'defect_picture_list'
+
+    IS_AUGMENTED = 'is_augmented'
+    REPORT_EVALUATION_VALUE = 'report_evaluation_value' # 报告的自动化质量评估值
+    IS_EVALUATED = 'is_evaluated' # 报告是否被评估. 仅当该字段为true时, 报告的质量评估值才有效
 
     class DefectPictureEnum:
         # 属于defect_picture_list
@@ -54,5 +61,11 @@ class AlgorithmEnum:
 
         class TaskRecommendationAlgoEnum:
             ITEM_CF = 'ItemCF'
+
+    class AugmentationEnum:
+        NLPAUG = 'nlpaug'
+
+    class EvaluationEnum:
+        SIMPLE_EVA = 'SimpleEva'
 
 
