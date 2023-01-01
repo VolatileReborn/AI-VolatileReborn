@@ -659,37 +659,11 @@ PostClusterReportsData = {
 }
 
 PostGetAugmentedReportsData = {
-    "augmented_report_num": 3,
-    "report": {
-        "report_id": 2,
-        "report_name": "鸭子杀测试",
-        "defect_explanation": "宽宽是狼！宽宽是狼！汪汪是鹈鹕！ ",
-        "defect_reproduction_step": "宽宽把汪汪砍死啦！",
-        "test_equipment_information": "铁呆呆鸟， 装都不装了！",
-        "defect_picture_list": [
-                {
-                    "img_name": "哈哈hhh",
-                    "img_url": "http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg",
-                    "img_id": 44
-                },
-                {
-                    "img_name": "哈哈hhh2",
-                    "img_url": "http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg",
-                    "img_id": 45
-                },
-        ],
-        "is_augmented": False,
-        "task_id": 94
-    },
-    "algorithm": "nlpaug"
-}
-
-PostGetReportEvaluationData = {
     "report": {
         "report_id": 37,
-        "report_name": "府县值九识温",
-        "defect_explanation": "ea irure dolore",
-        "test_equipment_information": "Excepteur",
+        "report_name": "鸭子杀杀人报告",
+        "defect_explanation": "宽宽刀到了加拿大鹅, 假装是XY刀的, XQ在旁边看戏. WZ看得笑死了",
+        "test_equipment_information": "IOS, Linux, Android",
         "defect_picture_list": [
             {
                 "img_name": "http://dummyimage.com/400x400",
@@ -708,7 +682,41 @@ PostGetReportEvaluationData = {
             }
         ],
         "is_augmented": False,
-        "defect_reproduction_step": "nisi ea minim",
+        "defect_reproduction_step": "该指令默认会清除所有如下资源：已停止的容器（container）,未被任何容器所使用的卷（volume）,未被任何容器所关联的网络（network）,所有悬空镜像（image）",
+        "task_id": 42
+    },
+    "algorithm": "nlpaug"
+}
+
+
+PostGetReportEvaluationData = {
+    "report": {
+        "report_id": 37,
+        "report_name": "府县值九识温",
+        "defect_explanation": "众包测试是一种新兴的软件测试方式，得到了学术界和工业界的广泛关注.\
+        系统地总结了近年来众包软件测试研究的学术文献以及工业界实践进展：首先，从学术文献涉及的研究主题演变、涵盖的软件测试问题和众包测试流程、\
+        采用的实验对象及测试人员规模等多个角度对相关文献中提出的技术和方法进行了汇总",
+        "test_equipment_information": "ipad, Huawei, iwatch",
+        "defect_picture_list": [
+            {
+                "img_name": "http://dummyimage.com/400x400",
+                "img_url": "http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg",
+                "img_id": 51
+            },
+            {
+                "img_name": "http://dummyimage.com/400x400",
+                "img_url": "http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg",
+                "img_id": 66
+            },
+            {
+                "img_name": "http://dummyimage.com/400x400",
+                "img_url": "http://mooctest-site.oss-cn-shanghai.aliyuncs.com/app/1508580633017/S71021-180938.jpg",
+                "img_id": 82
+            }
+        ],
+        "is_augmented": False,
+        "defect_reproduction_step": "正如著名的Linus定律所述, “只要足够多的眼球关注, 就可让所有软件缺陷浮现”[1].\
+        在软件产品的测试过程中, 软件产品管理者希望能够快速获得大量反馈",
         "task_id": 42
     },
     "algorithm": "ad anim"

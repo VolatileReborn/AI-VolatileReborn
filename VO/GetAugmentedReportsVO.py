@@ -10,7 +10,8 @@ class GetAugmentedReportsVO(object):
                 ReportEnum.DEFECT_EXPLANATION: defect_explanation_list[i],
                 ReportEnum.DEFECT_REPRODUCTION_STEP: defect_reproduction_step_list[i],
                 ReportEnum.TEST_EQUIPMENT_INFORMATION: test_equipment_information_list[i],
-                ReportEnum.REPORT_NAME: report_name_list[i]
+                ReportEnum.REPORT_NAME: report_name_list[i],
+                ReportEnum.DEFECT_PICTURE_LIST: list() # 目前为空, 因为不进行图片扩增
             }
             augmented_report_list.append(augmented_report)
 

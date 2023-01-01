@@ -73,6 +73,6 @@ if __name__ == "__main__":
     # testPrepareReportTrainingData()
     # testGetSimilarReports()
     # testGetRecommendedReports()
-    testClusterReports()
-    # testGetReportEvaluation()# 自动化评估
+    # testClusterReports()
+    testGetReportEvaluation()# 自动化评估
     # testGetAugmentedReports()
