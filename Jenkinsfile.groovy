@@ -1,4 +1,4 @@
-node("volatile-ai-slave") {
+node("slave1") {
     def workspace = pwd()
 
     def git_branch = 'master'
