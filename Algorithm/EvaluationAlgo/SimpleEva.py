@@ -40,8 +40,10 @@ class SimpleEva(object):
 
         text_sim = 0
         ocr_res_str = ''.join(ocr_res)
-
-        text_sim = TextSimilarity.lcs(text, ocr_res_str)
+        if ocr_res_str == '' or text == '': #文字内容为空， 或者图片中没有文字， 此时评分为0
+            text_sim = 0
+        else:
+            text_sim = TextSimilarity.lcs(text, ocr_res_str)
 
         # for ocr_txt in ocr_res:
         #     # cal sim between two types text info

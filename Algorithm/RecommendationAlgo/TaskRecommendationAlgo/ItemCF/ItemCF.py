@@ -10,6 +10,9 @@ import abc
 
 class ItemCF( TaskRecommendationStrategy ):
     '''
+    基于物品的协同过滤算法（ItemCF)
+    https://www.jianshu.com/p/f306a37a7374
+
         return：
             {
             [3,0.432], [4,0.3221], [35,0.321]
